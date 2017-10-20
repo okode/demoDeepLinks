@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ThreePage } from '../three/three';
+import { IonicPage, NavController } from 'ionic-angular';
 
 /**
  * Generated class for the TwoPage page.
@@ -19,12 +18,7 @@ import { ThreePage } from '../three/three';
 })
 export class TwoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TwoPage');
-  }
+  constructor(public navCtrl: NavController) {}
 
   goToThree() {
     this.navCtrl.push('three');

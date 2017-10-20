@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TwoPage } from '../two/two';
+import { IonicPage, NavController } from 'ionic-angular';
 
 /**
  * Generated class for the OnePage page.
@@ -19,15 +18,26 @@ import { TwoPage } from '../two/two';
 })
 export class OnePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad OnePage');
-  }
+  constructor(public navCtrl: NavController) {}
 
   goToTwo() {
     this.navCtrl.push('two');
+  }
+
+  ionViewWillEnter() {
+    console.log('One - Will enter');
+  }
+
+  ionViewDidEnter() {
+    console.log('One - Did enter');
+  }
+
+  ionViewWillLeave() {
+    console.log('One - Will leave');
+  }
+
+  ionViewDidLeave() {
+    console.log('One - Did leave');
   }
 
 }
