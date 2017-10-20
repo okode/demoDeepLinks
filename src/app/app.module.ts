@@ -10,19 +10,20 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-import { AppDeepLinkConfig } from './app.deeplinks';
+import { AboutPageModule } from '../pages/about/about.module';
+import { ContactPageModule } from '../pages/contact/contact.module';
+import { HomePageModule } from '../pages/home/home.module';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
     TabsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp, {}, AppDeepLinkConfig),
+    IonicModule.forRoot(MyApp),
+    AboutPageModule,
+    ContactPageModule,
+    HomePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
