@@ -32,7 +32,7 @@ export class NavMenuComponent {
   }
 
   loadScales() {
-    // TODO: Objects gets created again, ¿why?
+    // TODO: Object gets created again, ¿why?
     this.navController.push('scales', { 'agentId': this.scalesComponent.agentId });
   }
 
